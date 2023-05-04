@@ -1,5 +1,7 @@
-import { useState, useCallback } from 'react'
+import { useCallback } from 'react'
 import { nanoid } from 'nanoid';
+
+import useLocalStorage from './hooks/useLocalStorage';
 
 import Form from './components/Form';
 import { MemoizedTodo as Todo } from './components/Todo';
@@ -14,7 +16,7 @@ interface Todo {
 
 function App() {
   
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useLocalStorage<Todo[]>('todos', []);
 
   function addTodo(todo: string) {
     const newTodo = { id: `todo-${nanoid()}`, name: todo, completed: false };
@@ -23,14 +25,13 @@ function App() {
 
   const toggleTodoCompleted = useCallback((id: string) => {
     const updatedTodos = todos.map((todo) => {
-
       if (id === todo.id) {
         return { ...todo, completed: !todo.completed };
       }
       return todo;
     });
     setTodos(updatedTodos);
-  }, [todos]);
+  }, [todos, setTodos]);
 
   return (
     <>
