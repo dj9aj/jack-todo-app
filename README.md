@@ -8,6 +8,10 @@ Due to the time restrictions, I considered the project requirements and laid out
 - User can view their todo tasks and the data should persist after a page refresh
 - User can mark their tasks as complete/incomplete
 
+To run the application locally, please run the following commands once you have cloned the repository:
+- npm install
+- npm run dev
+
 If given more time, I would implement the following:
 
 ### Unit tests for React components
