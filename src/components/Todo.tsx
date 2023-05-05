@@ -9,7 +9,7 @@ interface TodoProps {
 
 function Todo(props: TodoProps): React.ReactElement {
   return (
-    <div>
+    <div className="todo__container space-children">
       <input
         id={props.id}
         type="checkbox"

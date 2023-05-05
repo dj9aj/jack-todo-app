@@ -6,25 +6,16 @@
   color: #333;
 }
 
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.main-container {
+  width: 500px;
+  margin: 0 auto; 
 }
 
 button {
   border-radius: 2px;
   border: 1px solid #EAEAEA;
-  padding: 6px 12px;
-  font-size: 1em;
+  padding: 12px 24px;
+  font-size: 16px;
   font-weight: 500;
   font-family: inherit;
   background-color: #fefefe;
@@ -32,11 +23,43 @@ button {
 }
 
 .todo__input {
-  /* width: 100%; */
-  padding: 6px 12px;
-  font-size: 14px;
+  padding: 12px 24px;
+  font-size: 16px;
   border: 1px solid #EAEAEA;
   border-bottom: 1px solid #EAEAEA;
   border-radius: 2px;
   outline: none;
+}
+
+.todo__input-container {
+  display: flex;
+  align-items: center;
+}
+
+.space-children {
+  > * {
+    margin-right: 6px;
+  }
+
+  > *:last-child {
+    margin-right: 0; 
+  }
+
+}
+
+.todo-list {
+  > * {
+    margin-bottom: 12px;
+  }
+
+  > *:last-child {
+    margin-bottom: 0; 
+  }
+}
+
+.todo__container {
+  display: flex;
+  padding: 12px;
+  background-color: #f7f7f7;
+  align-items: center;
 }

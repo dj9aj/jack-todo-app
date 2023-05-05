@@ -20,10 +20,10 @@ function Form(props: FormProps) {
   return (
     <form onSubmit={handleSubmit}>
       <div>
-        <label htmlFor="new-todo-input">
+        <label className="header-text" htmlFor="new-todo-input">
           What needs to be done?
         </label>
-        <div>
+        <div className="todo__input-container space-children">
           <input
             type="text"
             id="new-todo-input"
