@@ -34,11 +34,12 @@ function App() {
   }, [todos, setTodos]);
 
   return (
-    <>
+    <div className="main-container">
       <Form addTodo={addTodo} />
-      <div>
+      <div className="todo-list">
         {todos.map(todo => (
           <Todo
+            key={todo.id}
             id={todo.id}
             name={todo.name}
             completed={todo.completed}
@@ -46,7 +47,7 @@ function App() {
           />
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
